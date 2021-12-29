@@ -12,8 +12,9 @@ function App() {
       <Header />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/catalog" element={<Catalog />} />
-        <Route path="/details" element={<Details />} />
+        <Route path="/:category/search/:keyword" element={<Catalog />} />
+        <Route path="/:category/:id" element={<Details />} />
+        <Route path="/:category" element={<Catalog />} />
       </Routes>
       <Footer />
     </BrowserRouter>

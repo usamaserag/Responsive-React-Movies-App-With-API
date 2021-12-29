@@ -10,16 +10,15 @@ button {
     background-color: $main-color;
     color: $txt-color;
     border-radius: $border-radius;
-    padding: 8px 26px;
-    font-size: 24px;
+    padding: 6px 24px;
+    font-size: 20px;
     font-weight: 600;
     box-shadow: 0 0 4px 4px #ff00004d;
     transition: box-shadow 0.3s ease;
     position: relative;
 
     &:hover {
-        box-shadow: 0 0 4px 6
-        px #ff00004d;
+        box-shadow: 0 0 4px 8px #ff00004d;
     }
 }
 

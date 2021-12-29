@@ -19,33 +19,34 @@
   }
 
   &__content {
-      padding: 32px;
-      background-color: $body-bg;
-      width: 50%;
-      opacity: 0;
-      transform: translateY(-250px);
-      transition: transform 0.6s ease, opacity 0.6s ease;
-      position: relative;
+    padding: 32px;
+    background-color: $body-bg;
+    width: 50%;
+    opacity: 0;
+    transform: translateY(-250px);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    position: relative;
 
-      @include tablet {
-          width: 80%;
+    @include tablet {
+      width: 80%;
+    }
+
+    &__close {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      font-size: 24px;
+      cursor: pointer;
+
+
+      &:hover {
+        color: $main-color;
       }
-
-      &__close {
-          position: absolute;
-          right: 5px;
-          top: 5px;
-          font-size: 24px;
-          cursor: pointer;
-
-          &:hover {
-              color: $main-color;
-          }
-      }
+    }
   }
 
-  &.active > &__content {
-      opacity: 1;
-      transform: translateY(0);
+  &.active &__content {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -1,12 +1,11 @@
 import React from 'react';
-import Modal from '../../components/Modal';
+import HeroSlide from '../../components/HeroSlide';
 
 const Home = () => {
 
     return (
-        <div style={{marginTop: '128px'}}>
-             Home
-             <Modal />
+        <div>
+             <HeroSlide />
         </div>
     )
 }
