@@ -17,19 +17,18 @@ const HeroSlide = () => {
   const [movieList, setMovieList] = useState([]);
 
   useEffect(() => {
-    const getMovie = async () => {
+    const getMovies = async () => {
       const params = { page: 1 };
       try {
         const response = await tmdbApi.getMoviesList(movieType.popular, {
           params,
         });
         setMovieList(response.results.slice(0, 4));
-        console.log(response);
       } catch {
         console.log("error");
       }
     };
-    getMovie();
+    getMovies();
   }, []);
   return (
     <div className="hero-slide">
@@ -45,7 +44,7 @@ const HeroSlide = () => {
             {({ isActive }) => (
               <HeroSlideItem
                 item={item}
-                className={`${isActive ? "active" : ""}`}
+                className={`${isActive && "active"}`}
               />
             )}
           </SwiperSlide>

@@ -72,7 +72,9 @@ iframe {
 }
 .section {
   padding: 0 32px;
+
+  &__header {
+    @include flex(center, space-between);
+  }
 }
-.section__header {
-  @include flex(center, space-between);
-}
+

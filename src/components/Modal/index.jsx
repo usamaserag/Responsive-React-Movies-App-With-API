@@ -10,13 +10,13 @@ const Modal = (props) => {
   }, [props.active]);
 
   return (
-    <div id={props.id} className={`modal ${active ? "active" : ""}`}>
+    <div id={props.id} className={`modal ${active && "active"}`}>
       {props.children}
     </div>
   );
 };
 
-Modal.prototype = {
+Modal.propTypes = {
   active: PropTypes.bool,
   id: PropTypes.string,
 };
