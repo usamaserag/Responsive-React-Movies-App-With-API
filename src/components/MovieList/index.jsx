@@ -5,6 +5,7 @@ import apiConfig from "../../api/apiConfig";
 import tmdbApi, { category } from "../../api/tmdbApi";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import MovieCard from "../MovieCard";
 
 const MovieList = (props) => {
   const [items, setItems] = useState([]);
@@ -34,7 +35,7 @@ const MovieList = (props) => {
         {items.map((item, index) => {
           return (
             <SwiperSlide key={index}>
-              <img src={apiConfig.w500Image(item.poster_path)} alt="" />
+              <MovieCard item={item} category={props.category} />
             </SwiperSlide>
           );
         })}
