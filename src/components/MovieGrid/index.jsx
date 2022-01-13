@@ -72,7 +72,7 @@ const MovieGrid = (props) => {
       </div>
       {page < totalPage ? (
         <div className="movie-grid__loadmore">
-          <Button className="btn-small" title="Load more" onClick={loadMore} />
+          <Button className="btn-outline-small" title="Load more" onClick={loadMore} />
         </div>
       ) : null}
     </>
@@ -113,7 +113,7 @@ const MovieSearch = (props) => {
         value={keyword}
         onChange={(e) => setKeyword(e.target.value)}
       />
-      <Button className='btn-small-main' title='Search' onClick={movieSearch} />
+      <Button className='btn-main-small' title='Search' onClick={movieSearch} />
     </div>
   );
 };

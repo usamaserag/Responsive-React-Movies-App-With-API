@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import "./styles.scss";
-import apiConfig from "../../api/apiConfig";
 import tmdbApi, { category } from "../../api/tmdbApi";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

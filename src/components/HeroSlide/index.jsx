@@ -90,6 +90,7 @@ const HeroSlideItem = ({ item, className }) => {
           <div className="overview">{item.overview}</div>
           <div className="btns">
             <Button
+              className="btn-main"
               title="Watch now"
               onClick={() => history.push("/movie/" + item.id)}
             />

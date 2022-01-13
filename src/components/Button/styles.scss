@@ -3,16 +3,19 @@
 .btn {
   cursor: pointer;
   font-family: $font-family;
-  border: 4px solid transparent;
-  background-color: $main-color;
-  color: $txt-color;
   border-radius: $border-radius;
+  position: relative;
+}
+
+.btn-main {
+  border: 4px solid transparent;
   padding: 6px 24px;
   font-size: 20px;
   font-weight: 600;
   box-shadow: 0 0 4px 4px #ff00004d;
   transition: box-shadow 0.3s ease;
-  position: relative;
+  background-color: $main-color;
+  color: $txt-color;
 
   &:hover {
     box-shadow: 0 0 8px 10px #ff00004d;
@@ -21,41 +24,40 @@
 
 .btn-outline {
   border: 4px solid $txt-color;
+  padding: 6px 24px;
+  font-size: 20px;
+  font-weight: 600;
   background-color: transparent;
   color: $txt-color;
-  box-shadow: unset;
   transition: color 0.3s ease, background-color 0.3s ease;
 
   &:hover {
-    box-shadow: unset;
     color: $main-color;
     background-color: $txt-color;
   }
 }
 
-.btn-small {
+.btn-outline-small {
   border: 2px solid $txt-color;
   padding: 4px 24px;
   font-size: 16px;
+  font-weight: 600;
   background-color: transparent;
   color: $txt-color;
-  box-shadow: unset;
   transition: color 0.3s ease, background-color 0.3s ease;
 
   &:hover {
-    box-shadow: unset;
     color: $main-color;
     background-color: $txt-color;
   }
 }
 
-.btn-small-main {
+.btn-main-small {
   border: 2px solid transparent;
   padding: 4px 24px;
   font-size: 16px;
+  font-weight: 600;
   color: $txt-color;
-  cursor: pointer;
-  font-family: $font-family;
   background-color: $main-color;
   box-shadow: 0 0 4px 4px #ff00004d;
   transition: box-shadow 0.3s ease;
