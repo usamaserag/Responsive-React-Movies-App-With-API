@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './styles.scss'
+import './styles.scss';
+import footerPhoto from '../Footer/photo/footerPhoto.jpg'
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="footer" style={{backgroundImage: `url(${footerPhoto})`}}>
       <div className="footer__content container">
         <div className="footer__content__logo">
           <Link to="/">Movies</Link>
