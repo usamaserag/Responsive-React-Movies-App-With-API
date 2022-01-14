@@ -41,20 +41,22 @@ const Header = () => {
   }, []);
 
   return (
-    <div ref={headerRef} className="header__wrap container">
-      <div className="logo">
-        <Link to="/">Movies</Link>
+    <header ref={headerRef} className="header">
+      <div className="header__wrap container">
+        <div className="logo">
+          <Link to="/">Movies</Link>
+        </div>
+        <ul className="header__nav">
+          {headerNavBar.map((item, index) => {
+            return (
+              <li key={index} className={`${index === active && "active"}`}>
+                <Link to={item.path}>{item.name}</Link>
+              </li>
+            );
+          })}
+        </ul>
       </div>
-      <ul className="header__nav">
-        {headerNavBar.map((item, index) => {
-          return (
-            <li key={index} className={`${index === active && "active"}`}>
-              <Link to={item.path}>{item.name}</Link>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+    </header>
   );
 };
 
