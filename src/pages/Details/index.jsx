@@ -5,6 +5,7 @@ import apiConfig from '../../api/apiConfig';
 import './styles.scss';
 import CastList from './CastList';
 import VideoList from './VideoList';
+import MovieList from '../../components/MovieList';
 
 const Details = () => {
     const {category, id} = useParams();
@@ -49,6 +50,10 @@ const Details = () => {
                     <div className='container'>
                             <div className='section mb-3'>
                                 <VideoList id={item.id} />
+                            </div>
+                            <div className='section mb-3'>
+                                <h2>Similar</h2>
+                                <MovieList category={category} type="similar" id={item.id} />
                             </div>
                     </div>
                    </>
