@@ -2,6 +2,7 @@
 
 .hero-slide {
     margin-bottom: 48px;
+    height: 100vh;
 
     &__item {
         width: 100%;
@@ -69,10 +70,10 @@
             }
 
             &__poster {
-                flex: 1;
+                // flex: 1;
                 position: relative;
 
-                @include flex (center, flex-start);
+                // @include flex (center, flex-start);
 
                 @include tablet {
                     display: none;
